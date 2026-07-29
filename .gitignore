@@ -1,0 +1,15 @@
+# VS Code editor settings
+.vscode/
+*.code-workspace
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Log files
+*.log
+npm-debug.log*
+
+# Node modules (in case you use packages later)
+node_modules/
