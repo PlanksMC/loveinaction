@@ -1,2 +1,15 @@
 # loveinaction
+
 Code for the program Love In Action.
+
+---
+
+# Copyright and Terms of Use
+
+Copyright © 2026 Love In Action, LLC. All rights reserved.
+
+This repository contains proprietary software and source code developed for Love In Action, LLC. It is published here for viewing and hosting purposes only.
+
+You are strictly prohibited from using, copying, modifying, merging, publishing, distributing, sublicensing, or selling this software, in whole or in part, without explicit, prior written permission from Love In Action, LLC. 
+
+Unauthorized use or distribution of this code will be subject to legal action.
