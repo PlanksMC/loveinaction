@@ -1,0 +1,1811 @@
+/*
+ * Copyright (c) 2026 Love In Action, LLC. All rights reserved.
+ * Proprietary and Confidential. Unauthorized copying or distribution is strictly prohibited.
+ */
+
+
+/* ==========================
+   LOVE IN ACTION WEBSITE
+   CSS PART 1
+========================== */
+
+
+:root {
+
+    --navy: #18324b;
+    --green: #6e8f4c;
+    --gold: #c79c2b;
+    --cream: #f7f1e7;
+    --white: #ffffff;
+    --text: #334155;
+    --soft: #efe3d1;
+
+}
+
+
+
+
+
+
+/* Reset */
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+
+
+body {
+
+    font-family: 'Source Sans 3', sans-serif;
+
+    background:
+    linear-gradient(
+        180deg,
+        var(--cream),
+        #f3ebdc
+    );
+
+    color: var(--text);
+
+    line-height: 1.8;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+
+
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+
+
+
+
+a {
+
+    color: var(--green);
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+
+}
+
+
+
+
+
+a:hover {
+
+    color: var(--navy);
+
+}
+
+
+
+
+
+
+
+/* Container */
+
+
+.container {
+
+    width: min(1100px, 92%);
+
+    margin: auto;
+
+}
+
+
+
+
+
+
+
+/* Sections */
+
+
+section {
+
+    padding: 70px 0;
+
+}
+
+
+
+
+
+section:nth-child(even) {
+
+    background:
+    rgba(
+        255,
+        255,
+        255,
+        0.75
+    );
+
+}
+
+
+
+
+
+
+
+/* Navigation */
+
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background:
+    rgba(
+        255,
+        255,
+        255,
+        0.92
+    );
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+
+
+
+
+
+.nav-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 0;
+
+}
+
+
+
+
+
+
+
+.logo {
+
+    font-size: 1.5rem;
+
+    font-weight: 800;
+
+    color: var(--navy);
+
+}
+
+
+
+
+
+
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+
+
+
+
+
+.nav-links a {
+
+    font-weight: 600;
+
+    color: var(--navy);
+
+}
+
+
+
+
+
+
+
+.nav-links a:hover {
+
+    color: var(--green);
+
+}
+
+
+
+
+
+
+
+/* Titles */
+
+
+.section-title {
+
+    font-size: 2.1rem;
+
+    color: var(--navy);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+
+
+.divider {
+
+    width: 110px;
+
+    height: 4px;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--gold),
+        var(--green)
+    );
+
+    border-radius: 50px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+
+
+
+
+.lead {
+
+    max-width: 780px;
+
+    font-size: 1.08rem;
+
+    color: #475569;
+
+}
+
+/* ==========================
+   CSS PART 2
+   HERO + QUOTE
+========================== */
+
+
+
+
+
+/* Hero Section */
+
+
+.hero {
+
+    position: relative;
+
+    height: 450px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+
+
+
+
+.hero img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+    saturate(1.15)
+    brightness(1.05);
+
+}
+
+
+
+
+
+
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.15),
+        rgba(24,50,75,0.25)
+    );
+
+}
+
+
+
+
+
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: #111;
+
+    padding: 20px;
+
+}
+
+
+
+
+
+
+
+.hero-content h1 {
+
+    font-size:
+    clamp(
+        2.8rem,
+        7vw,
+        5rem
+    );
+
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+
+
+    text-shadow:
+    0 3px 12px rgba(0,0,0,0.35);
+
+}
+
+
+
+
+
+
+
+.hero-content p {
+
+    font-size: 1.35rem;
+
+    font-weight: 400;
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+
+
+
+
+
+/* Hero Buttons */
+
+
+.hero-buttons {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+
+
+
+
+.big-link {
+
+
+    display: inline-block;
+
+
+    padding:
+    15px 34px;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--green),
+        #7da15d
+    );
+
+
+    color: white;
+
+
+    font-weight: 700;
+
+
+    border-radius: 999px;
+
+
+    box-shadow:
+    0 10px 22px rgba(110,143,76,0.25);
+
+
+    transition: 0.3s ease;
+
+
+}
+
+
+
+
+
+
+
+.big-link:hover {
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--navy),
+        #294f6e
+    );
+
+    color:white;
+
+    transform:
+    translateY(-3px);
+
+}
+
+
+
+
+
+
+
+.hero-secondary {
+
+
+    display: inline-block;
+
+
+    padding:
+    15px 34px;
+
+
+    border-radius:999px;
+
+
+    border:
+    2px solid var(--navy);
+
+
+    color:var(--navy);
+
+
+    font-weight:700;
+
+
+    transition:0.3s ease;
+
+
+}
+
+
+
+
+
+
+
+.hero-secondary:hover {
+
+
+    background:var(--navy);
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Quote Section */
+
+
+.quote {
+
+
+    padding:
+    95px 25px;
+
+
+    text-align:center;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--navy),
+        #2b4e6b
+    );
+
+
+    color:white;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+
+
+.quote::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(199,156,43,0.25),
+        transparent 40%
+    );
+
+
+}
+
+
+
+
+
+
+
+.quote p {
+
+
+    position:relative;
+
+
+    z-index:1;
+
+
+    font-size:2rem;
+
+
+    font-style:italic;
+
+
+    font-weight:300;
+
+
+    max-width:850px;
+
+
+    margin:auto;
+
+
+}
+
+/* ==========================
+   CSS PART 3
+   CARDS + CONTACT + SUPPORT
+========================== */
+
+
+
+
+
+
+/* Detention Info Cards */
+
+
+.info-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(260px,1fr)
+    );
+
+    gap:24px;
+
+    margin-top:35px;
+
+}
+
+
+
+
+
+
+
+.info-card {
+
+    padding:30px;
+
+
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #f7f1e7
+    );
+
+
+    border-left:
+    5px solid var(--green);
+
+
+    border-radius:16px;
+
+
+    box-shadow:
+    0 8px 24px rgba(24,50,75,0.08);
+
+
+    transition:0.3s ease;
+
+
+}
+
+
+
+
+
+
+
+.info-card:hover {
+
+
+    transform:
+    translateY(-5px);
+
+
+    box-shadow:
+    0 16px 35px rgba(24,50,75,0.14);
+
+
+}
+
+
+
+
+
+
+
+.info-card h3 {
+
+
+    color:var(--navy);
+
+
+    font-size:1.35rem;
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+
+
+
+.info-card a {
+
+
+    display:block;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Contact Section */
+
+
+.contact-list {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:16px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+
+
+.contact-item {
+
+
+    display:flex;
+
+
+    align-items:flex-start;
+
+
+    gap:14px;
+
+
+    font-size:1.05rem;
+
+
+}
+
+
+
+
+
+
+
+.contact-icon {
+
+
+    width:34px;
+
+
+    text-align:center;
+
+
+    font-size:1.35rem;
+
+
+    flex-shrink:0;
+
+
+}
+
+
+
+
+
+
+
+.contact-item strong {
+
+
+    color:var(--navy);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Support Grid */
+
+
+.support-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(280px,1fr)
+    );
+
+
+    gap:30px;
+
+
+    margin-top:35px;
+
+
+}
+
+
+
+
+
+
+
+.support-box {
+
+
+    padding:32px;
+
+
+    background:
+    linear-gradient(
+        160deg,
+        #ffffff,
+        #fcf7ee
+    );
+
+
+    border-top:
+    6px solid var(--gold);
+
+
+    border-radius:18px;
+
+
+    box-shadow:
+    0 12px 30px rgba(24,50,75,0.08);
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:14px;
+
+
+}
+
+
+
+
+
+
+
+.support-box h3 {
+
+
+    color:var(--navy);
+
+
+    font-size:1.4rem;
+
+
+    margin-bottom:5px;
+
+
+}
+
+
+
+
+
+
+
+.support-box p,
+.support-box li {
+
+
+    color:#4b5563;
+
+
+}
+
+
+
+
+
+
+
+.support-box ul {
+
+
+    padding-left:22px;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+
+
+.support-box li {
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Donation Notice */
+
+
+.support-note {
+
+
+    background:
+    var(--soft);
+
+
+    border:
+    1px solid rgba(24,50,75,0.1);
+
+
+    padding:16px;
+
+
+    border-radius:12px;
+
+
+    font-size:.98rem;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Support Items */
+
+
+.support-list {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:12px;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+
+
+.support-item {
+
+
+    display:flex;
+
+
+    align-items:flex-start;
+
+
+    gap:12px;
+
+
+    padding-top:12px;
+
+
+    border-top:
+    1px solid #eee5d7;
+
+
+}
+
+
+
+
+
+
+
+.support-item:first-child {
+
+
+    border-top:none;
+
+
+    padding-top:0;
+
+
+}
+
+
+
+
+
+
+
+.support-item strong {
+
+
+    color:var(--navy);
+
+
+}
+
+
+
+
+
+
+
+.support-link {
+
+
+    font-weight:700;
+
+
+}
+
+/* ==========================
+   CSS PART 4
+   PROJECTS + FOOTER
+========================== */
+
+
+
+
+
+
+/* Past Projects */
+
+
+.project-list {
+
+
+    max-width:850px;
+
+
+    padding-left:25px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+
+
+.project-list li {
+
+
+    margin-bottom:15px;
+
+
+    color:#475569;
+
+
+    font-size:1.05rem;
+
+
+}
+
+
+
+
+
+
+
+.project-list li::marker {
+
+
+    color:var(--green);
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+
+footer {
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--navy),
+        #244b68
+    );
+
+
+    color:white;
+
+
+    padding:
+    70px 20px 60px;
+
+
+    text-align:center;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+
+
+footer::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+    radial-gradient(
+        circle at top center,
+        rgba(199,156,43,0.18),
+        transparent 45%
+    );
+
+
+}
+
+
+
+
+
+
+
+.footer-content {
+
+
+    max-width:600px;
+
+
+    margin:auto;
+
+
+    position:relative;
+
+
+    z-index:1;
+
+
+}
+
+
+
+
+
+
+
+.footerh2 {
+
+
+    font-size:2rem;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+
+
+.footer-contact {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+    gap:14px;
+
+
+    margin:
+    25px auto 30px;
+
+
+}
+
+
+
+
+
+
+
+.footer-contact .contact-item {
+
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+
+footer p {
+
+
+    opacity:.92;
+
+
+    margin:10px 0;
+
+
+}
+
+
+
+
+
+
+
+footer a {
+
+
+    color:#ffd76a;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+footer a:hover {
+
+
+    color:white;
+
+
+}
+
+/* ==========================
+   CSS PART 5
+   MOBILE + FINAL TOUCHES
+========================== */
+
+
+
+
+
+/* Smooth Button Animation */
+
+
+.big-link,
+.hero-secondary,
+.info-card,
+.support-box {
+
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+
+
+
+
+
+
+/* Mobile Responsive */
+
+
+@media (max-width:768px) {
+
+
+
+    .navbar {
+
+        position:relative;
+
+    }
+
+
+
+
+    .nav-container {
+
+
+        flex-direction:column;
+
+
+        gap:15px;
+
+
+    }
+
+
+
+
+
+
+    .nav-links {
+
+
+        flex-wrap:wrap;
+
+
+        justify-content:center;
+
+
+        gap:15px;
+
+
+    }
+
+
+
+
+
+
+
+    .hero {
+
+
+        height:350px;
+
+
+    }
+
+
+
+
+
+
+
+    .hero-content h1 {
+
+
+        font-size:2.5rem;
+
+
+        letter-spacing:1px;
+
+
+    }
+
+
+
+
+
+
+
+    .hero-content p {
+
+
+        font-size:1.1rem;
+
+
+    }
+
+
+
+
+
+
+
+    .hero-buttons {
+
+
+        flex-direction:column;
+
+
+        align-items:center;
+
+
+    }
+
+
+
+
+
+
+
+    .big-link,
+    .hero-secondary {
+
+
+        width:90%;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+
+
+
+
+    .section-title {
+
+
+        font-size:1.8rem;
+
+
+    }
+
+
+
+
+
+
+
+    .quote p {
+
+
+        font-size:1.45rem;
+
+
+    }
+
+
+
+
+
+
+
+    .contact-item {
+
+
+        font-size:1rem;
+
+
+    }
+
+
+
+
+
+
+
+    .support-grid,
+    .info-grid {
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Small Phones */
+
+
+@media (max-width:480px) {
+
+
+
+    body {
+
+
+        line-height:1.7;
+
+
+    }
+
+
+
+
+
+
+
+    .container {
+
+
+        width:94%;
+
+
+    }
+
+
+
+
+
+
+
+    section {
+
+
+        padding:50px 0;
+
+
+    }
+
+
+
+
+
+
+
+    .hero {
+
+
+        height:300px;
+
+
+    }
+
+
+
+
+
+
+
+    .hero-content h1 {
+
+
+        font-size:2rem;
+
+
+    }
+
+
+
+
+
+
+
+    .hero-content p {
+
+
+        font-size:.95rem;
+
+
+    }
+
+
+
+
+
+
+
+    .support-box {
+
+
+        padding:24px;
+
+
+    }
+
+
+
+
+
+
+
+    .info-card {
+
+
+        padding:22px;
+
+
+    }
+
+
+
+
+
+
+
+    footer {
+
+
+        padding:
+        55px 15px;
+
+
+    }
+
+
+}
