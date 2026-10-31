@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="liacircleicon.ico" />
+
+        <title>Love In Action | Go Bags</title>
+
+        <meta
+            name="description"
+            content="Request a Go-Bag through Love In Action, supporting detainees at the Chase County Detention Center."
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            :root {
+                --navy: #18324b;
+                --green: #6e8f4c;
+                --gold: #c79c2b;
+                --cream: #f7f1e7;
+                --white: #ffffff;
+                --text: #334155;
+                --soft: #efe3d1;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: "Source Sans 3", sans-serif;
+                background: linear-gradient(180deg, var(--cream), #f3ebdc);
+                color: var(--text);
+                line-height: 1.8;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            img {
+                max-width: 100%;
+                display: block;
+            }
+
+            a {
+                color: var(--green);
+                text-decoration: underline;
+                text-decoration-color: rgba(110, 143, 76, 0.45);
+                text-underline-offset: 3px;
+                transition: 0.25s ease;
+            }
+
+            a:hover {
+                color: var(--navy);
+            }
+
+            a:focus-visible,
+            button:focus-visible,
+            input:focus-visible {
+                outline: 3px solid var(--gold);
+                outline-offset: 3px;
+            }
+
+            .container {
+                width: min(1100px, 92%);
+                margin: auto;
+            }
+
+            /* HEADER */
+
+            .navbar {
+                background: rgba(255, 255, 255, 0.92);
+                border-bottom: 1px solid rgba(24, 50, 75, 0.08);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            }
+
+            .nav-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 14px 0;
+                gap: 20px;
+            }
+
+            .logo-placeholder {
+                width: 180px;
+                height: 65px;
+                background: var(--cream);
+                border: 2px dashed var(--gold);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--navy);
+                font-weight: 700;
+                font-size: 13px;
+            }
+
+            .back-link {
+                font-weight: 700;
+                color: var(--navy);
+                text-decoration: none;
+            }
+
+            /* BANNER */
+
+            .banner {
+                margin-top: 30px;
+                position: relative;
+                background: var(--navy);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            .banner-image {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            @media (max-width: 768px) {
+                .banner-image {
+                    height: 200px;
+                }
+            }
+
+            /* INTRO */
+
+            .intro {
+                padding: 48px 0 30px;
+            }
+
+            .section-title {
+                font-size: 2.1rem;
+                color: var(--navy);
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 10px;
+            }
+
+            .divider {
+                width: 110px;
+                height: 4px;
+                background: linear-gradient(90deg, var(--gold), var(--green));
+                border-radius: 50px;
+                margin-bottom: 22px;
+            }
+
+            .lead {
+                max-width: 780px;
+                font-size: 1.08rem;
+                color: #475569;
+            }
+
+            /* FORM */
+
+            .form-section {
+                padding: 15px 0 65px;
+            }
+
+            .form-box {
+                max-width: 800px;
+                margin: auto;
+                padding: 35px;
+                background: linear-gradient(145deg, #ffffff, #f7f1e7);
+                border-left: 5px solid var(--green);
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(24, 50, 75, 0.08);
+            }
+
+            .form-box h2 {
+                color: var(--navy);
+                font-size: 1.65rem;
+                margin-bottom: 5px;
+            }
+
+            .form-description {
+                color: #475569;
+                margin-bottom: 28px;
+            }
+
+            .field {
+                margin-bottom: 23px;
+            }
+
+            label,
+            legend {
+                display: block;
+                color: var(--navy);
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"] {
+                width: 100%;
+                padding: 13px 15px;
+                border: 1px solid #d8d2c6;
+                border-radius: 6px;
+                background: var(--white);
+                color: var(--text);
+                font-family: inherit;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="tel"]:focus {
+                border-color: var(--green);
+            }
+
+            .help {
+                display: block;
+                margin-top: 5px;
+                font-size: 0.88rem;
+                color: #64748b;
+            }
+
+            fieldset {
+                border: none;
+                margin: 0 0 23px;
+                padding: 0;
+            }
+
+            .options {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .option {
+                display: inline-flex;
+                align-items: center;
+                gap: 9px;
+                padding: 10px 18px;
+                background: var(--white);
+                border: 1px solid #ded9cf;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: 600;
+                color: var(--text);
+                margin: 0;
+            }
+
+            .option input {
+                accent-color: var(--green);
+                width: 16px;
+                height: 16px;
+            }
+
+            button {
+                display: block;
+                width: 100%;
+                border: none;
+                border-radius: 999px;
+                padding: 15px 25px;
+                background: linear-gradient(135deg, var(--green), #7da15d);
+                color: white;
+                font-family: inherit;
+                font-size: 1rem;
+                font-weight: 700;
+                cursor: pointer;
+                box-shadow: 0 10px 22px rgba(110, 143, 76, 0.25);
+                transition: 0.3s ease;
+            }
+
+            button:hover {
+                background: linear-gradient(135deg, var(--navy), #294f6e);
+                transform: translateY(-2px);
+            }
+
+            .form-note {
+                text-align: center;
+                margin-top: 16px;
+                font-size: 0.9rem;
+                color: #64748b;
+            }
+
+            /* NETLIFY SPAM PREVENTION */
+
+            .honeypot {
+                position: absolute;
+                left: -10000px;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+
+            /* FOOTER */
+
+            footer {
+                background: linear-gradient(135deg, var(--navy), #244b68);
+                color: white;
+                padding: 55px 20px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            footer h2 {
+                font-size: 2rem;
+                margin-bottom: 12px;
+            }
+
+            footer p {
+                margin: 8px 0;
+                opacity: 0.92;
+            }
+
+            footer a {
+                color: #ffd76a;
+                font-weight: 600;
+            }
+
+            footer a:hover {
+                color: white;
+            }
+
+            .copyright {
+                margin-top: 25px;
+                font-size: 0.9rem;
+            }
+
+            /* MOBILE */
+
+            @media (max-width: 768px) {
+                .nav-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .back-link {
+                    margin-top: 4px;
+                }
+
+                .banner {
+                    min-height: 150px;
+                }
+
+                .section-title {
+                    font-size: 1.8rem;
+                }
+
+                .form-box {
+                    padding: 25px 20px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .container {
+                    width: 94%;
+                }
+
+                .banner-placeholder h2 {
+                    font-size: 1.5rem;
+                }
+
+                .options {
+                    flex-direction: column;
+                }
+
+                .option {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a class="back-link" href="https://chasecountydetainees.com/">
+                    ← Back to Love In Action
+                </a>
+            </div>
+        </nav>
+
+        <main class="container">
+            <!-- BANNER PREVIEW - REPLACE WITH REAL BANNER -->
+
+            <div class="banner">
+                <div class="banner-placeholder">
+                    <img
+                        src="loveinactionbanner.png"
+                        alt="Love In Action Banner"
+                        class="banner-image"
+                    />
+                </div>
+            </div>
+
+            <!-- INTRODUCTION -->
+
+            <section class="intro">
+                <h1 class="section-title">Go-Bag Requests</h1>
+
+                <div class="divider"></div>
+
+                <p class="lead">
+                    A Go-Bag provides essential items and practical support for
+                    detainees as they begin their next chapter after leaving the
+                    Chase County Detention Center.
+                </p>
+            </section>
+
+            <!-- REQUEST FORM -->
+
+            <section class="form-section">
+                <div class="form-box">
+                    <h2>Request a Go-Bag</h2>
+
+                    <p class="form-description">
+                        Please complete the information below to submit a Go-Bag
+                        request.
+                    </p>
+
+                    <form
+                        name="go-bag-request"
+                        method="POST"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
+                    >
+                        <input
+                            type="hidden"
+                            name="form-name"
+                            value="go-bag-request"
+                        />
+
+                        <p class="honeypot">
+                            <label>
+                                Leave this field empty:
+                                <input name="bot-field" />
+                            </label>
+                        </p>
+
+                        <div class="field">
+                            <label for="detainee-name"> Detainee's Name </label>
+
+                            <input
+                                type="text"
+                                id="detainee-name"
+                                name="detainee-name"
+                                autocomplete="off"
+                                required
+                            />
+                        </div>
+
+                        <div class="field">
+                            <label for="a-number"> A-Number </label>
+
+                            <input
+                                type="text"
+                                id="a-number"
+                                name="a-number"
+                                placeholder="If known"
+                            />
+
+                            <span class="help">
+                                Leave blank if the A-number is unknown.
+                            </span>
+                        </div>
+
+                        <fieldset>
+                            <legend>Please Indicate Size</legend>
+
+                            <div class="options">
+                                <label class="option">
+                                    <input
+                                        type="radio"
+                                        name="size"
+                                        value="Medium"
+                                        required
+                                    />
+                                    Medium
+                                </label>
+
+                                <label class="option">
+                                    <input
+                                        type="radio"
+                                        name="size"
+                                        value="X-Large"
+                                        required
+                                    />
+                                    X-Large
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Please Indicate Gender</legend>
+
+                            <div class="options">
+                                <label class="option">
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        value="Male"
+                                        required
+                                    />
+                                    Male
+                                </label>
+
+                                <label class="option">
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        value="Female"
+                                        required
+                                    />
+                                    Female
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="field">
+                            <label for="email"> Your Email Address </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="requester-email"
+                                autocomplete="email"
+                                required
+                            />
+                        </div>
+
+                        <div class="field">
+                            <label for="phone"> Your Phone Number </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="requester-phone"
+                                autocomplete="tel"
+                                required
+                            />
+                        </div>
+
+                        <button type="submit">Submit Go-Bag Request</button>
+
+                        <p class="form-note">
+                            Questions? Contact Kay Krause at
+                            <a href="mailto:loveinaction2026@yahoo.com">
+                                loveinaction2026@yahoo.com </a
+                            >.
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+
+        <footer>
+            <div class="container">
+                <h2>Love In Action</h2>
+
+                <p>Kay Krause | Founder / Coordinator</p>
+
+                <p>
+                    <a href="mailto:loveinaction2026@yahoo.com">
+                        loveinaction2026@yahoo.com
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tel:+16204818323"> (620) 481-8323 </a>
+                </p>
+
+                <p>PO BOX 149</p>
+
+                <div class="copyright">
+                    Copyright © 2026 Love In Action, Inc.
+                    <br />
+                    All Rights Reserved.
+                    <br />
+                    <a href="https://contactcarson.netlify.app"
+                        >Website by Carson J</a
+                    >
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

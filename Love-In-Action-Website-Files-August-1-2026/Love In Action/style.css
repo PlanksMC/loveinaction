@@ -1,0 +1,1199 @@
+/*
+ * Copyright (c) 2026 Love In Action, Inc. All rights reserved.
+ * Proprietary and Confidential. Unauthorized copying or distribution is strictly prohibited.
+ */
+
+/* ==========================
+   LOVE IN ACTION WEBSITE
+   CSS PART 1
+========================== */
+
+:root {
+    --navy: #18324b;
+    --green: #6e8f4c;
+    --gold: #c79c2b;
+    --cream: #f7f1e7;
+    --white: #ffffff;
+    --text: #334155;
+    --soft: #efe3d1;
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+
+    background: linear-gradient(180deg, var(--cream), #f3ebdc);
+
+    color: var(--text);
+
+    line-height: 1.8;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+a {
+    color: var(--green);
+
+    text-decoration: underline;
+
+    text-decoration-color: rgba(110, 143, 76, 0.45);
+
+    text-underline-offset: 3px;
+
+    transition: 0.25s ease;
+}
+
+a:hover {
+    color: var(--navy);
+
+    text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--gold);
+
+    outline-offset: 4px;
+}
+
+/* Container */
+
+.container {
+    width: min(1100px, 92%);
+
+    margin: auto;
+}
+
+/* Sections */
+
+section {
+    padding: 56px 0;
+
+    scroll-margin-top: 85px;
+}
+
+.section-tight {
+    padding: 42px 0 24px;
+}
+
+section:nth-child(even) {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+/* Navigation */
+
+.navbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(24, 50, 75, 0.08);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.nav-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 12px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+
+    font-weight: 800;
+
+    color: var(--navy);
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 6px;
+}
+
+.nav-links a {
+    display: block;
+
+    padding: 7px 14px;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+
+    color: var(--navy);
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+
+    background: rgba(110, 143, 76, 0.1);
+}
+
+.nav-links a:focus-visible {
+    outline-offset: 2px;
+}
+
+/* Titles */
+
+.section-title {
+    font-size: 2.1rem;
+
+    color: var(--navy);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+}
+
+.divider {
+    width: 110px;
+
+    height: 4px;
+
+    background: linear-gradient(90deg, var(--gold), var(--green));
+
+    border-radius: 50px;
+
+    margin-bottom: 25px;
+}
+
+.lead {
+    max-width: 780px;
+
+    font-size: 1.08rem;
+
+    color: #475569;
+}
+
+/* ==========================
+   CSS PART 2
+   HERO + QUOTE
+========================== */
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+
+    height: 450px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.hero img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: saturate(1.15) brightness(1.05);
+}
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.15),
+        rgba(24, 50, 75, 0.25)
+    );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: #111;
+
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.8rem, 7vw, 5rem);
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero-content p {
+    font-size: 1.35rem;
+
+    font-weight: 400;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+/* Hero Buttons */
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.big-link {
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 15px 34px;
+
+    background: linear-gradient(135deg, var(--green), #7da15d);
+
+    color: white;
+
+    font-weight: 700;
+
+    border-radius: 999px;
+
+    box-shadow: 0 10px 22px rgba(110, 143, 76, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.big-link:hover {
+    background: linear-gradient(135deg, var(--navy), #294f6e);
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+.hero-secondary {
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 15px 34px;
+
+    border-radius: 999px;
+
+    border: 2px solid var(--navy);
+
+    color: var(--navy);
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.hero-secondary:hover {
+    background: var(--navy);
+
+    color: white;
+}
+
+/* Quote Section */
+
+.quote {
+    padding: 72px 24px;
+
+    text-align: center;
+
+    background: linear-gradient(135deg, var(--navy), #2b4e6b);
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.quote::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: radial-gradient(
+        circle at top right,
+        rgba(199, 156, 43, 0.25),
+        transparent 40%
+    );
+}
+
+.quote p {
+    position: relative;
+
+    z-index: 1;
+
+    font-size: 2rem;
+
+    font-style: italic;
+
+    font-weight: 300;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+/* ==========================
+   CSS PART 3
+   CARDS + CONTACT + SUPPORT
+========================== */
+
+/* Detention Info Cards */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 24px;
+
+    margin-top: 35px;
+}
+
+.info-card {
+    padding: 30px;
+
+    background: linear-gradient(145deg, #ffffff, #f7f1e7);
+
+    border-left: 5px solid var(--green);
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(24, 50, 75, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 16px 35px rgba(24, 50, 75, 0.14);
+}
+
+.info-card h3 {
+    color: var(--navy);
+
+    font-size: 1.35rem;
+
+    margin-bottom: 12px;
+}
+
+.info-card a {
+    display: block;
+
+    font-weight: 600;
+}
+
+/* Contact Section */
+
+.contact-list {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid rgba(24, 50, 75, 0.08);
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(24, 50, 75, 0.06);
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 1.05rem;
+
+    text-decoration: none;
+}
+
+.contact-person,
+.contact-item {
+    min-height: 44px;
+}
+
+.contact-person {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.contact-label {
+    min-width: 48px;
+
+    color: var(--navy);
+
+    font-weight: 700;
+}
+
+.contact-icon {
+    width: 34px;
+
+    text-align: center;
+
+    font-size: 1.35rem;
+
+    flex-shrink: 0;
+}
+
+.contact-item strong {
+    color: var(--navy);
+}
+
+.facebook-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.facebook-link img {
+    width: 20px;
+
+    height: 20px;
+
+    flex-shrink: 0;
+}
+
+.go-bag-card {
+    margin-top: 22px;
+
+    padding: 24px;
+
+    background: linear-gradient(145deg, #ffffff, #f7f1e7);
+
+    border-left: 5px solid var(--green);
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(24, 50, 75, 0.08);
+}
+
+.go-bag-availability {
+    display: block;
+
+    margin-bottom: 14px;
+
+    padding: 10px 12px;
+
+    background: rgba(220, 38, 38, 0.08);
+
+    border-left: 4px solid #dc2626;
+
+    border-radius: 6px;
+
+    color: #8f1d1d;
+
+    font-weight: 700;
+}
+
+.support-item .go-bag-availability {
+    margin: 8px 0 0;
+
+    font-size: 0.95rem;
+}
+
+.support-box li .go-bag-availability {
+    margin-top: 10px;
+}
+
+.go-bag-heading p,
+.go-bag-notice p {
+    color: #475569;
+}
+
+.go-bag-notice p + p {
+    margin-top: 8px;
+}
+
+.go-bag-includes {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 16px;
+}
+
+.go-bag-includes h4 {
+    margin-bottom: 5px;
+
+    color: var(--navy);
+}
+
+.go-bag-includes ul {
+    padding-left: 20px;
+}
+
+.go-bag-includes li {
+    margin-bottom: 2px;
+}
+
+.go-bag-notice {
+    margin-top: 16px;
+
+    padding: 12px 14px;
+
+    background: rgba(199, 156, 43, 0.1);
+
+    border-radius: 10px;
+}
+
+.go-bag-application {
+    display: inline-block;
+
+    margin-top: 16px;
+
+    padding: 9px 18px;
+
+    background: var(--green);
+
+    border-radius: 999px;
+
+    color: var(--white);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.go-bag-application:hover {
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+/* Support Grid */
+
+.support-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+
+    margin-top: 35px;
+}
+
+.support-box {
+    padding: 28px;
+
+    background: linear-gradient(160deg, #ffffff, #fcf7ee);
+
+    border-top: 6px solid var(--gold);
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 30px rgba(24, 50, 75, 0.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.support-box h3 {
+    color: var(--navy);
+
+    font-size: 1.4rem;
+
+    margin-bottom: 5px;
+}
+
+.support-box p,
+.support-box li {
+    color: #4b5563;
+}
+
+.support-box ul {
+    padding-left: 22px;
+
+    margin-top: 10px;
+}
+
+.support-box li {
+    margin-bottom: 10px;
+}
+
+/* Donation Notice */
+
+.support-note {
+    background: var(--soft);
+
+    border: 1px solid rgba(24, 50, 75, 0.1);
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    font-size: 0.98rem;
+}
+
+/* Support Items */
+
+.support-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.support-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #eee5d7;
+}
+
+.support-item:first-child {
+    border-top: none;
+
+    padding-top: 0;
+}
+
+.support-item strong {
+    color: var(--navy);
+}
+
+.support-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-weight: 700;
+}
+
+.support-link-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-weight: 700;
+}
+
+.support-link-label img {
+    width: 24px;
+
+    height: 24px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+.support-link img {
+    width: 24px;
+
+    height: 24px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+/* ==========================
+   CSS PART 4
+   PROJECTS + FOOTER
+========================== */
+
+/* Past Projects */
+
+.project-list {
+    max-width: 850px;
+
+    padding-left: 25px;
+
+    margin-top: 25px;
+}
+
+.project-list li {
+    margin-bottom: 15px;
+
+    color: #475569;
+
+    font-size: 1.05rem;
+}
+
+.project-list li::marker {
+    color: var(--green);
+
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    background: linear-gradient(135deg, var(--navy), #244b68);
+
+    color: white;
+
+    padding: 70px 20px 60px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: radial-gradient(
+        circle at top center,
+        rgba(199, 156, 43, 0.18),
+        transparent 45%
+    );
+}
+
+.footer-content {
+    max-width: 600px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.footerh2 {
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+.footer-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 25px auto 30px;
+}
+
+.footer-contact .contact-item {
+    justify-content: center;
+
+    text-align: center;
+}
+
+footer p {
+    opacity: 0.92;
+
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ffd76a;
+
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/*
+ * Copyright (c) 2026 Love In Action, LLC. All rights reserved.
+ * Proprietary and Confidential. Unauthorized copying or distribution is strictly prohibited.
+ */
+
+/* ==========================
+   CSS PART 5
+   MOBILE + FINAL TOUCHES
+========================== */
+
+/* Program Updates */
+
+.report-section {
+    padding-top: 36px;
+}
+
+.report-card {
+    background: linear-gradient(145deg, #ffffff, #f7f1e7);
+
+    border-left: 5px solid var(--green);
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    box-shadow: 0 8px 24px rgba(24, 50, 75, 0.08);
+}
+
+.report-card p {
+    margin-bottom: 14px;
+}
+
+.report-card ul {
+    padding-left: 20px;
+
+    margin: 0 0 14px;
+}
+
+.report-card li {
+    margin-bottom: 8px;
+
+    line-height: 1.7;
+
+    padding-left: 4px;
+}
+
+.support-box h4 {
+    color: var(--navy);
+
+    font-size: 1.15rem;
+
+    margin-top: 16px;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+.update-summary {
+    background: var(--soft);
+
+    border: 1px solid rgba(24, 50, 75, 0.1);
+
+    border-radius: 12px;
+
+    padding: 16px 18px;
+
+    margin: 10px 0 12px;
+}
+
+.update-summary h4 {
+    margin-top: 0;
+
+    margin-bottom: 8px;
+}
+
+.update-summary ul {
+    padding-left: 18px;
+
+    margin: 0;
+}
+
+.update-summary li {
+    margin-bottom: 6px;
+}
+
+.update-link {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+.update-link:hover {
+    color: var(--green);
+}
+
+.update-details {
+    margin-top: 4px;
+}
+
+.update-details summary {
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-radius: 999px;
+
+    background: rgba(110, 143, 76, 0.12);
+
+    color: var(--navy);
+
+    font-weight: 700;
+}
+
+.update-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.update-detail-content {
+    margin-top: 12px;
+}
+
+.support-box hr {
+    border: none;
+
+    height: 2px;
+
+    background: linear-gradient(90deg, var(--gold), var(--green));
+
+    margin: 12px 0 16px;
+
+    border-radius: 999px;
+}
+
+.support-box blockquote {
+    margin-top: 18px;
+
+    padding: 20px 24px;
+
+    background: var(--soft);
+
+    border-left: 5px solid var(--gold);
+
+    border-radius: 12px;
+
+    font-style: italic;
+
+    color: var(--navy);
+
+    line-height: 1.8;
+}
+
+.support-box strong {
+    color: var(--navy);
+}
+
+.support-box ul li {
+    margin-bottom: 12px;
+}
+
+/* Smooth Button Animation */
+
+.big-link,
+.hero-secondary,
+.info-card,
+.support-box {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    .nav-container {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+
+        letter-spacing: 1px;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .big-link,
+    .hero-secondary {
+        width: 90%;
+
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .quote p {
+        font-size: 1.45rem;
+    }
+
+    .contact-item {
+        font-size: 1rem;
+    }
+
+    .support-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+    body {
+        line-height: 1.7;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .support-box {
+        padding: 24px;
+    }
+
+    .go-bag-card {
+        padding: 18px;
+    }
+
+    .contact-list {
+        padding: 14px;
+    }
+
+    .support-box blockquote {
+        padding: 16px;
+    }
+
+    .info-card {
+        padding: 22px;
+    }
+
+    footer {
+        padding: 55px 15px;
+    }
+}
+
+.founder-note {
+    font-size: 15px;
+    margin-top: 5px;
+}
